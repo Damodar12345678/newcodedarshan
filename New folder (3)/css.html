@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>code darshan</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: rgb(0, 214, 221);
+
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background: #9e9e9e;
+      display: flex;
+      align-items: center;
+
+    }
+
+
+    .popup {
+      width: 1400px;
+      height: 800px;
+      background: #19252d;
+      border-radius: 6px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.1);
+      text-align: center;
+      padding: 0 30px 30px;
+      color: #333;
+      visibility: hidden;
+      transition: transform 0.4s, top 0.4s;
+
+    }
+
+    .open-popup {
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup img {
+      border: 2px solid #eaff00;
+      width: 100px;
+      margin-top: 2px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #454545;
+      color: #fff;
+    }
+
+    .left,
+    .right {
+      flex-basis: 50%;
+      padding: 10px;
+
+    }
+
+    textarea {
+      border-radius: 10px;
+      width: 500px;
+      height: 150px;
+      background: #45ff6d;
+      color: #f2ff00;
+      border-radius: 6px;
+
+      border: 05px black;
+      outline: 0;
+      font-size: 18px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 95%;
+      color: #00ff37;
+      background: #e9c810;
+      border: 0;
+      outline: 0;
+
+    }
+
+    label i {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      height: 30px;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-lg  bg-warning">
+
+    <a class="navbar-brand" href="#">Code दर्शन..</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="upcoming.html">Upcomings...</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Explore More
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="codedarshan.html">HTML</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="css.html">CSS</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="js.html">JAVASCRIPT</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item , nav-link-disabled " href="#">BOOTSTRAP</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="openPopup()">run ur code</a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <pre><i class="fa-duotone fa-gear-complex-code fa-beat-fade"></i> </pre>
+    </div>
+    <i class="fa-solid fa-circle-half-stroke fa-shake fa-xl" onclick="myFunction()" style="color: #000000;"></i>
+    </div>
+  </nav>
+  <img src="css.gif" class="img-fluid" alt="Responsive image">
+  <HR>
+  <div style="float :center">
+    <div style="float:center;">
+      <p class="mx-4 ">
+      <h1 class="text-warning">Information & History</h1>
+      CSS is the language we use to style an HTML document.
+      CSS describes how HTML elements should be displayed.
+      This tutorial will teach you CSS from basic to advanced.
+      CSS stands for Cascading Style Sheets. It is a style sheet language
+      which is used to describe the look and formatting of a document written
+      in markup language. It provides an additional feature to HTML. It is generally
+      used with HTML to change the style of web pages and user interfaces. It can also be
+      used with any kind of XML documents including plain XML, SVG and XUL.
+      CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and
+      user interfaces for many mobile applications.
+
+      </p>
+      <hr>
+      <h1>
+        <h1 class="text-warning">What does CSS do</h1>
+        <p>
+          You can add new looks to your old HTML documents.
+          You can completely change the look of your website with only a few changes in CSS code.
+          <b>
+            <h3 class="text-danger">• Why use CSS/Major Benefits </h3>
+            <p class="text-warning">1.Solves a big problem </p>
+
+          </b> Before CSS, tags like font, color, background style, element alignments, border and size had to be repeated on every web page. This was a very long process. For example: If you are developing a large website where fonts and color information are added on every single page, it will be become a long and expensive process. CSS was created to solve this problem. It was a W3C recommendation.
+          <b>
+            <p class="text-warning">2. Saves a lot of time</p>
+          </b> CSS style definitions are saved in external CSS files so it is possible to change the entire website by changing just one file.
+          <b>
+            <p class="text-warning">3.Provide more attributes</p>
+          </b>
+          CSS provides more detailed attributes than plain HTML to define the look and feel of the website.
+        </p>
+    </div>
+  </div>
+  <hr>
+  
+    <h1 class="text-warning">CSS Syntax</h1>
+    <iframe src="css1.png" width="50px" height="50px"></iframe>
+    <p>A CSS rule set contains a selector and a declaration block.</p>
+    <hr>
+
+  </div>
+  <div style="border: #f2ff00;">
+    <h1 class="text-warning">
+      JavaScript Example</h1>
+    <p>Example - 1
+    <pre>&lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+      &lt;body&gt;
+      &lt;p id="a"&gt;&lt;/p&gt;
+      &lt;script&gt;
+      document.getElementById("a").innerHTML = 5 + 6;
+      &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</pre>
+    </p>
+  </div>
+  <p class="text-danger">Output is :- 11</p>
+  Example - 2
+  <pre>&lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+        &lt;body&gt;
+
+        &lt;script&gt;
+        document.write(5+6);
+        &lt;/script&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+  <p class="text-danger">Output is :- 11</p>
+  </div>
+  <footer class="bg-dark text-center text-white my-4">
+    <!-- Grid container -->
+    <!--<div class="container p-4">-->
+    <!-- Section: Social media -->
+
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <br><br><br>
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+
+              <strong>Enter Your Mail to Sign up for our newsletter :-</strong>
+            </p>
+          </div>
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+
+            </div>
+          </div>
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-danger mb-4">
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <section class="mb-4">
+      <p>
+        Coding is essentially a problem-solving process that helps to
+        analyze a situation or goal and then use problem-solving skills
+        to determine and implement a solution. While the goal or challenge
+        may be the same, the solution itself may look different depending on
+        the strategies taken to achieve the desired result.
+      </p>
+    </section>
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+    </div><!-- hitwebcounter Code START -->
+    <p class="text-warning">Total Visitors till Now..</p>
+
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=8299016&style=0032&nbdigits=4&type=page&initCount=99999"
+      title="Free Counter" Alt="web counter" border-style="2px solid-red" /></a>
+    <br>
+    <hr>
+
+
+
+
+  </footer>
+
+  <body class="text-center">
+
+
+
+    <div class="popup" id="popup">
+      <br>
+      <img src="logo.gif"><br><br>
+      <i class="fa-solid fa-xmark fa-beat fa-xl" style="color: #f0f0f0;" onclick="closePopup()"></i>
+
+
+
+      <div class="left">
+        <label>HTML</label><br>
+        <textarea id="html-code" onkeyup="run()"></textarea>
+        <br>
+        <label></i>CSS</label><br>
+        <textarea id="css-code" onkeyup="run()"></textarea>
+        <br>
+        <label></i>JavaScript</label><br>
+        <textarea id="js-code" onkeyup="run()"></textarea>
+      </div>
+      <div class="right">
+        <label><i class="fa-duotone fa-play"></i>Output..</label><br>
+        <iframe id="output"></iframe>
+      </div>
+      <button type="button" onclick="closePopup()">ok</button>
+    </div>
+
+  </body>
+  <script>
+    function run() {
+      let htmlCode = document.getElementById("html-code").value;
+      let cssCode = document.getElementById("css-code").value;
+      let jsCode = document.getElementById("js-code").value;
+      let output = document.getElementById("output");
+      output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
+
+    }
+    let popup = document.getElementById("popup");
+    function openPopup() {
+      popup.classList.add('open-popup');
+    }
+    function closePopup() {
+      popup.classList.remove('open-popup');
+    }
+
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/305d530da5.js" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
